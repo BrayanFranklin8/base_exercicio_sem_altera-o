@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from 'styled-components'
-import temaLight from './themes/light'
 
 const EstiloGlobal = createGlobalStyle`
 * {

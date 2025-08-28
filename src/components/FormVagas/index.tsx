@@ -1,5 +1,4 @@
 import { FormEvent, useState } from 'react'
-
 import { Formulario, BotaoPesquisar, Entrada } from './styles'
 
 type Props = {
@@ -7,24 +6,23 @@ type Props = {
 }
 
 const FormVagas = ({ aoPesquisar }: Props) => {
-  const [termo, setTermo] = useState<string>('')
+  const [termo, setTermo] = useState('')
 
   const aoEnviarForm = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    aoPesquisar(termo.toLocaleLowerCase())
+    aoPesquisar(termo.toLowerCase())
   }
 
   return (
     <Formulario onSubmit={aoEnviarForm}>
       <Entrada
         placeholder="Front-end, fullstack, node, design"
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setTermo(e.target.value)
-        }
         type="search"
+        onChange={(e) => setTermo(e.target.value)}
       />
       <BotaoPesquisar>Pesquisar</BotaoPesquisar>
     </Formulario>
   )
 }
+
 export default FormVagas
