@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Container } from '../../styles'
 
 export const FormularioHero = styled.form`
   height: 360px;
@@ -28,11 +29,12 @@ export const FormularioHero = styled.form`
 export const TituloHero = styled.h2`
   font-family: Gloock, serif;
   font-size: 48px;
-  color: ${(props) => props.theme.corTituloHero};
-  position: relative;
-  z-index: 1;
 
   @media (max-width: 768px) {
     font-size: 32px;
   }
+`
+export const ContainerHero = styled(Container)`
+  color: ${(props) => props.theme.corTituloHero};
+  position: relative;
 `

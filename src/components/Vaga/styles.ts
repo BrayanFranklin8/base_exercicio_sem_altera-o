@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const VagaLi = styled.div`
+export const VagaLi = styled.li`
   border: 1px solid ${(props) => props.theme.corPrincipal};
   background-color: ${(props) => props.theme.corSecundaria};
   color: ${(props) => props.theme.corPrincipal};
@@ -11,6 +11,11 @@ export const VagaLi = styled.div`
   &:hover {
     background-color: ${(props) => props.theme.corPrincipal};
     color: ${(props) => props.theme.corSecundaria};
+  }
+  &:hover a {
+    border-color: ${(props) => props.theme.corPrincipal};
+    background-color: ${(props) => props.theme.corSecundaria};
+    color: ${(props) => props.theme.corPrincipal};
   }
 `
 
@@ -26,13 +31,6 @@ export const LinkVaga = styled.a`
   font-size: 14px;
   border-radius: 8px;
   text-align: center;
-
-  &:hover {
-    border-color: ${(props) => props.theme.corPrincipal};
-    background-color: ${(props) => props.theme.corSecundaria};
-    color: ${(props) => props.theme.corPrincipal};
-    cursor: pointer;
-  }
 
   @media (max-width: 768px) {
     display: block;

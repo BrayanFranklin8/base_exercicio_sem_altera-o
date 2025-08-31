@@ -4,7 +4,7 @@ import Hero from './components/Hero'
 import ListaVagas from './containers/ListaVagas'
 import temaLight from './themes/light'
 
-import EstiloGlobal from './styles'
+import EstiloGlobal, { Container } from './styles'
 
 function App() {
   return (
@@ -12,9 +12,9 @@ function App() {
       <EstiloGlobal />
       <Header />
       <Hero />
-      <div className="container">
+      <Container>
         <ListaVagas />
-      </div>
+      </Container>
     </ThemeProvider>
   )
 }

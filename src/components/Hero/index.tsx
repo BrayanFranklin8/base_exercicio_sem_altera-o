@@ -1,13 +1,12 @@
-import { Container } from '../../styles'
-import { FormularioHero, TituloHero } from './styles'
+import { ContainerHero, FormularioHero, TituloHero } from './styles'
 
 const Hero = () => (
   <FormularioHero>
-    <Container>
+    <ContainerHero>
       <TituloHero>
         As melhores vagas para tecnologia, design e artes visuais.
       </TituloHero>
-    </Container>
+    </ContainerHero>
   </FormularioHero>
 )
 
